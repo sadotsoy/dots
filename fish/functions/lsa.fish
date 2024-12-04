@@ -1,4 +1,4 @@
-function lsa --description 'alias lsa=lsa'
- command lsa $argv
-        
+function lsa --wraps='ls -a' --description 'alias lsa=ls -a'
+    ls -a $argv
+
 end
