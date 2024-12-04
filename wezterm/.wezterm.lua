@@ -13,12 +13,12 @@ config.window_padding = {
 	bottom = 0,
 }
 config.force_reverse_video_cursor = true
-config.window_background_opacity = 0.77
+config.window_background_opacity = 0.95
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = true
 
---colors object
-local colors = {
+--colors
+local kanagawaDragon = {
 	foreground = "#dcd7ba",
 	background = "#181616",
 
@@ -38,7 +38,7 @@ local colors = {
 }
 
 -- colorscheme
-config.colors = colors
+config.colors = kanagawaDragon
 
 -- config.color_scheme = "Kasugano (terminal.sexy)"
 -- config.color_scheme = "3024 (dark) (terminal.sexy)"

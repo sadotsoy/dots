@@ -6,6 +6,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
+      transparent = true,
       -- wave the default heart-warming theme,
       -- dragon for those late-night sessions
       -- lotus for when you're out in the open.
@@ -42,7 +43,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- Set the default color scheme
-      colorscheme = "kanagawa",
+      colorscheme = "kanagawa-dragon",
     },
   },
 }
