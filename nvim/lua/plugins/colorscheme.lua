@@ -1,6 +1,6 @@
 return {
+  -- LazyVim configuration
   {
-    -- LazyVim configuration
     "LazyVim/LazyVim",
     -- Set the default color scheme
     opts = {
