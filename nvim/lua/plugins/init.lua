@@ -34,6 +34,17 @@ return {
         notifier = { enabled = true },
         quickfile = { enabled = true },
         statuscolumn = { enabled = false }, -- we set this in options.lua
+        lazygit = {
+          enabled = true,
+          configure = true,
+          config = {
+            os = { editPreset = "nvim-remote" },
+            gui = {
+              -- set to an empty string "" to disable icons
+              nerdFontsVersion = "3",
+            },
+          },
+        },
         terminal = {
           win = {
             keys = {
@@ -54,6 +65,8 @@ return {
       { "<leader>S",  function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
       { "<leader>n", function() Snacks.notifier.show_history() end, desc = "Notification History" },
       { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
+      { "<leader>gg", function() Snacks.lazygit() end, desc = "Git UI" },
+      { "<leader>gl", function() Snacks.lazygit.log() end, desc = "Git UI (cwd)" },
     },
     config = function(_, opts)
       local notify = vim.notify
