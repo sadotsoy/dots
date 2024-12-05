@@ -1,10 +1,61 @@
 return {
+  {
+    -- LazyVim configuration
+    "LazyVim/LazyVim",
+    -- Set the default color scheme
+    opts = {
+      colorscheme = "rose-pine",
+      -- colorscheme = function()
+      --   require("rose-pine").load()
+      -- end,
+    },
+  },
+  --
+  -- colorschemes
+  --
+  -- rose-pine
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    priority = 1000,
+    opts = {
+      variant = "main",
+      styles = {
+        bold = true,
+        italic = true,
+        transparency = true,
+      },
+    },
+  },
+  --
+  -- lakluster
+  {
+    "slugbyte/lackluster.nvim",
+    lazy = false,
+    -- priority = 1000,
+    init = function()
+      -- vim.cmd.colorscheme("lackluster")
+      -- vim.cmd.colorscheme("lackluster-hack") -- my favorite
+      -- vim.cmd.colorscheme("lackluster-mint")
+    end,
+  },
+  --
+  -- darkfoce (WIP)
+  {
+    dir = "/Users/sadot__c/workspace/darkforce",
+    name = "darkforce",
+    -- priority = 1000,
+    opts = {
+      transparent = true,
+    },
+  },
+  --
   -- kanagawa
   {
     "rebelot/kanagawa.nvim",
     name = "kanagawa",
     lazy = false,
-    priority = 1000,
+    -- priority = 1000,
     opts = {
       transparent = true,
       -- wave the default heart-warming theme,
@@ -36,14 +87,6 @@ return {
           PmenuThumb = { bg = theme.ui.bg_p2 }, -- Custom colors for popup menu thumb
         }
       end,
-    },
-  },
-  {
-    -- LazyVim configuration
-    "LazyVim/LazyVim",
-    opts = {
-      -- Set the default color scheme
-      colorscheme = "kanagawa-dragon",
     },
   },
 }
