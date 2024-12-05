@@ -1,3 +1,5 @@
+-- coding configuration based from lazyvim
+-- Url: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/coding.lua
 return {
 
   -- auto completion
@@ -85,7 +87,7 @@ return {
     end,
     main = "lazyvim.util.cmp",
   },
-
+  --
   -- snippets
   {
     "nvim-cmp",
@@ -110,7 +112,7 @@ return {
       end
     end,
   },
-
+  --
   -- auto pairs
   {
     "echasnovski/mini.pairs",
@@ -131,14 +133,14 @@ return {
       LazyVim.mini.pairs(opts)
     end,
   },
-
+  --
   -- comments
   {
     "folke/ts-comments.nvim",
     event = "VeryLazy",
     opts = {},
   },
-
+  --
   -- Better text-objects
   {
     "echasnovski/mini.ai",
@@ -176,7 +178,8 @@ return {
       end)
     end,
   },
-
+  --
+  -- lazydev
   {
     "folke/lazydev.nvim",
     ft = "lua",
@@ -190,7 +193,7 @@ return {
       },
     },
   },
-
+  --
   -- Add lazydev source to cmp
   {
     "hrsh7th/nvim-cmp",
@@ -199,10 +202,15 @@ return {
       table.insert(opts.sources, { name = "lazydev", group_index = 0 })
     end,
   },
-
+  --
   -- higlight hex colors
   {
     "brenoprata10/nvim-highlight-colors",
     opts = {},
+  },
+  --
+  -- kdl support
+  {
+    "imsnif/kdl.vim",
   },
 }
