@@ -8,3 +8,7 @@ if type -q /opt/homebrew/bin/brew
 else if type -q /usr/local/bin/brew
     eval (/usr/local/bin/brew shellenv)
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
