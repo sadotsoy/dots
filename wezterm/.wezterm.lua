@@ -2,8 +2,12 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
--- font
-config.font_size = 12.8
+-- font styles
+config.font_size = 14.2
+-- Agave
+-- config.font = wezterm.font("Agave Nerd Font Mono") -- font size recommended 15.5
+config.font = wezterm.font("Hack Nerd Font Mono") -- font size recommended 14.2
+config.font = wezterm.font("SauceCodePro Nerd Font Mono") -- font size recommended 14.2
 
 -- ui
 config.window_padding = {
