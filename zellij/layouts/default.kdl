@@ -15,7 +15,9 @@ layout {
               hide_frame_for_single_pane "true"
 
               mode_normal  "#[bg=#C34043] "
-              mode_tmux    "#[bg=#f1fa8c] "
+              // mode_normal "#[bg=#a6da95,fg=#181926,bold] NORMAL #[bg=#181926,fg=#a6da95]"
+              // mode_locked "#[bg=#6e738d,fg=#181926,bold]   #[bg=#181926,fg=#6e738d]"
+              mode_tmux    "#[bg=#f1fa8c]"
 
               tab_normal   "#[fg=#8D908D] {name} "
               tab_active   "#[fg=#728F66,bold,italic] {name} "
