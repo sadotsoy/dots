@@ -4,7 +4,7 @@ return {
     "LazyVim/LazyVim",
     -- Set the default color scheme
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "catppuccin",
       -- colorscheme = function()
       --   require("rose-pine").load()
       -- end,
@@ -12,14 +12,27 @@ return {
   },
   --
   -- colorschemes
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    opts = {
+      -- latte, frappe, macchiato, mocha
+      flavour = "mocha",
+      transparent_background = true,
+    },
+  },
   --
   -- rose-pine
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    priority = 1000,
+    -- priority = 1000,
     opts = {
-      variant = "main",
+      -- main
+      -- moon
+      -- dawn
+      variant = "moon",
       styles = {
         bold = true,
         italic = true,
@@ -28,10 +41,28 @@ return {
     },
   },
   --
+  -- tokyonight
+  {
+    "folke/tokyonight.nvim",
+    name = "tokyonight",
+    -- priority = 1000,
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  },
+  --
   -- lakluster
   {
     "slugbyte/lackluster.nvim",
+    name = "lackluster",
     lazy = false,
+    opts = {
+      transparent = true,
+    },
     -- priority = 1000,
     init = function()
       -- vim.cmd.colorscheme("lackluster")
@@ -41,14 +72,14 @@ return {
   },
   --
   -- darkfoce (WIP)
-  {
-    dir = "/Users/sadot__c/workspace/darkforce",
-    name = "darkforce",
-    -- priority = 1000,
-    opts = {
-      transparent = true,
-    },
-  },
+  -- {
+  --   dir = "/Users/sadot__c/workspace/darkforce",
+  --   name = "darkforce",
+  --   -- priority = 1000,
+  --   opts = {
+  --     transparent = true,
+  --   },
+  -- },
   --
   -- kanagawa
   {
