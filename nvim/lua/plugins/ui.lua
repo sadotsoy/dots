@@ -177,4 +177,26 @@ return {
       return opts
     end,
   },
+  --
+  -- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      cmdline = {
+        enabled = true,
+        view = "cmdline", -- "cmdline_mini" | "cmdline" | "cmline_popup"
+      },
+      routes = {
+        -- REMOVE THIS once this issue is fixed: https://github.com/yioneko/vtsls/issues/159
+        {
+          filter = {
+            event = "notify",
+            find = "Request textDocument/inlayHint failed",
+          },
+          opts = { skip = true },
+        },
+      },
+    },
+  },
 }
