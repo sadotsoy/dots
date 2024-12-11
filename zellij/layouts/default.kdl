@@ -3,10 +3,28 @@ layout {
     default_tab_template {
         pane size=1 borderless=true {
             plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
-              format_left   "{mode} #[fg=#89B4FA,bold]{session}"
-              foemat_center "{tabs}"
+              // Colors
+              //
+              // #5d2167
+              // #3f0f48
+              // #7f73b4
+              // #D5DC2E
+              // #1a061f
+              // #481054
+              color_bg "#481054"
+              color_fg "#DADCBD"
+              color_meteorite "#4a2574"
+              color_silver "#CBCBCB"
+              color_honey_flower "#5d2167"
+              color_violet "#1a061f"
+              color_valentino "#3f0f48"
+
+              // Format
+              format_left "#[bg=$violet,fg=$silver,bold] > {mode}#[bg=$valentino,fg=$silver,bold] {session} "
+              format_center "{tabs}"
               format_space  ""
 
+              // Border
               border_enabled  "false"
               border_char     "─"
               border_format   "#[fg=#6C7086]{char}"
@@ -14,11 +32,27 @@ layout {
 
               hide_frame_for_single_pane "true"
 
-              mode_normal  "#[bg=blue] "
-              mode_tmux    "#[bg=#ffc387] "
+              // Modes
+              mode_normal  "#[bg=$bg,fg=$fg,bold] NORMAL "
+              mode_tmux    "#[bg=#EDD9DE,fg=#5858DC,bold] TMUX "
+              mode_locked  "#[bg=$bg,fg=$fg,bold]  LOCKED "
+              mode_resize  "#[bg=$bg,fg=$fg,bold] RESIZE "
+              mode_pane    "#[bg=$bg,fg=$fg,bold] PANE "
+              mode_session "#[bg=$bg,fg=$fg,bold] SESSION "
+              mode_search  "#[bg=$bg,fg=$fg,bold]  SEARCH "
+              mode_scroll  "#[bg=$bg,fg=$fg,bold] SCROLL "
+              mode_move    "#[bg=$bg,fg=$fg,bold] MOVE "
+              mode_tab     "#[bg=$bg,fg=$fg,bold] TAB "
+              mode_prompt  "#[bg=$bg,fg=$fg,bold] PROMPT "
+              mode_enter_search "#[bg=$bg,fg=$fg,bold] ENTER SEARCH "
 
-              tab_normal   "#[fg=#6C7086] {name} "
-              tab_active   "#[fg=#9399B2,bold,italic] {name} "
+              // Tabs
+              tab_active "#[bg=$meteorite,fg=$silver] #[bg=$meteorite,fg=$silver,bold]{name} {sync_indicator}{fullscreen_indicator}{floating_indicator}#[bg=$meteorite,fg=$silver]"
+              tab_normal "#[bg=$silver,fg=$meteorite] #[bg=$silver,fg=$meteorite,italic]{name} {sync_indicator}{fullscreen_indicator}{floating_indicator}#[bg=#$silver,fg=$meteorite]"
+
+              tab_sync_indicator       "󰓦 "
+              tab_fullscreen_indicator "󱟱  "
+              tab_floating_indicator   "󰉈 "
             }
         }
         children
