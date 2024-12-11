@@ -18,9 +18,10 @@ layout {
               color_honey_flower "#5d2167"
               color_violet "#1a061f"
               color_valentino "#3f0f48"
+              color_valentino_dark "#2f0b37"
 
               // Format
-              format_left "#[bg=$violet,fg=$silver,bold] > {mode}#[bg=$valentino,fg=$silver,bold] {session} "
+              format_left "#[bg=$violet,fg=$silver,bold] > {mode}#[bg=$valentino_dark,fg=$silver,bold] {session} "
               format_center "{tabs}"
               format_space  ""
 
