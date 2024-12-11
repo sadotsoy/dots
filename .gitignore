@@ -1,3 +1,15 @@
+### Other ###
+
+# Copilot
+github-copilot/apps.json
+github-copilot
+
+# Fish shell
+fish/fish_variables
+
+# Raycast
+raycast
+
 ### Linux ###
 *~
 
@@ -18,11 +30,6 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-
-
-# Raycast
-raycast
-
 
 # Icon must end with two \r
 Icon
@@ -115,7 +122,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-github-copilot/apps.json
-github-copilot
-fish/fish_variables
