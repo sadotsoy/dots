@@ -116,7 +116,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,vim,macos,linux,windows
 github-copilot/apps.json
 github-copilot
 fish/fish_variables
